@@ -6,9 +6,10 @@ import { AiFillTwitterCircle } from 'react-icons/ai';
 import { BsFacebook } from 'react-icons/bs';
 import { FaUserAlt } from 'react-icons/fa';
 import { AiFillLock } from 'react-icons/ai';
+import {AiFillEyeInvisible} from 'react-icons/ai';
+import {AiFillEye} from 'react-icons/ai';
 import Logo from '../assets/logo.png';
 import { client } from '../client';
-
 
 const Login = () => {
   const navigate = useNavigate();
@@ -50,6 +51,7 @@ const Login = () => {
           <div className="m-5 shadow-md border p-5 text-xl bg-white flex  justify-between items-center text-center rounded-full">
             <AiFillLock/>
             <input className='w-full px-2 border-none outline-none' type="password" placeholder='Password' />
+            <AiFillEyeInvisible className='cursor-pointer'/>
             </div>
           <div className="m-5 shadow-md border rounded-full bg-white  text-xl w-190 text-center">
             <button style={{

@@ -1,20 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { HiMenu } from 'react-icons/hi';
-import { AiFillCloseCircle } from 'react-icons/ai';
-import { Link, Route, Routes } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import React from 'react';
 
 const Home = () => {
-
-  return (
-    <div className="flex bg-gray-50 md:flex-row flex-col h-screen transition-height duration-75 ease-out">
-      <div className="nav">
-        <ul className='flex justify-between items-center'>
-          <HiMenu className='text-3xl'/>
-        </ul>
-      </div>
-    </div>
+  return(
+    <h1>Hello</h1>
   );
-};
-
+}
 export default Home;

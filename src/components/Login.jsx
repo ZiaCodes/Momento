@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
@@ -48,6 +48,7 @@ const Login = () => {
             <FaUserAlt/>
             <input className='w-full px-2 border-none outline-none' type="text" placeholder='Username' />
             </div>
+            
           <div className="m-5 shadow-md border p-5 text-xl bg-white flex  justify-between items-center text-center rounded-full">
             <AiFillLock/>
             <input className='w-full px-2 border-none outline-none' type="password" placeholder='Password' />

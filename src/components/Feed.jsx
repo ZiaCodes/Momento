@@ -1,26 +1,46 @@
-import React, {useState, useEffect} from 'react';
-import { userQuery } from '../utils/data';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+
 import { client } from '../client';
-import {AiFillEye} from 'react-icons/ai';
-import {FiDownload} from 'react-icons/fi';
-import {RiShareForwardFill} from 'react-icons/ri';
+import { feedQuery, searchQuery } from '../utils/data';
+import MasonryLayout from './MasonryLayout';
+import Spinner from './Spinner';
+
 const Feed = () => {
-  const [user, setUser] = useState(null);
-    const userInfo = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
+  const [pins, setPins] = useState();
+  const [loading, setLoading] = useState(false);
+  const { categoryId } = useParams();
 
   useEffect(() => {
-    const query = userQuery(userInfo?.googleId);
+    if (categoryId) {
+      setLoading(true);
+      const query = searchQuery(categoryId);
+      client.fetch(query).then((data) => {
+        setPins(data);
+        setLoading(false);
+      });
+    } else {
+      setLoading(true);
 
-    client.fetch(query).then((data) => {
-      setUser(data[0])
-    })
-  }, []);
+      client.fetch(feedQuery).then((data) => {
+        setPins(data);
+        setLoading(false);
+      });
+    }
+  }, [categoryId]);
+  const ideaName = categoryId || 'new';
+  if (loading) {
+    return (
+      <Spinner message={`We are adding ${ideaName} ideas to your feed!`} />
+    );
+  }
   return (
-
-    <div className='flex justify-center items-center my-5 '>
-      <p>Hello world</p>
+    <div>
+      {pins && (
+        <MasonryLayout pins={pins} />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Feed
+export default Feed;

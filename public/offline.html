@@ -5,8 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momento || You are Offline</title>
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
 </head>
+<style>
+    .container{
+        cursor: grab;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        color: rgba(57, 57, 57, 0.767);
+    }
+    .container .box img{
+        width: 80px;
+        filter: drop-shadow(2px 2px 1px rgba(27, 27, 27, 0.5));
+    }
+    .title{
+        font-size: 10px;
+    }
+    #div1 {
+        width: 35px;
+        height: 35px;
+        padding: 10px;
+        border: 1px dashed #aaaaaa;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s all;
+    }
+    #div1:hover{
+        transform: scale(1.1);
+    }
+    .offline{
+        z-index: 1;
+    }
+
+</style>
 <body>
-    <p>You are offline</p>
+    <div class="container">
+        <div class="box">
+            <img src="./image/logo.png" alt="logo" >
+            <p class="title">Momento | Share Moment</p>
+        </div>
+        <div class="box-new">
+            <h1>You are Offline</h1>
+            <p>To Use this Application kindly go online</p>
+        </div>
+        <div class="offline">
+            <img id="drag1" src="./image/wifi.png"  draggable="true" ondragstart="drag(event)" alt="offline" width="25px"/>
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      
+            
+            </div>
+        </div>
+    </div>
 </body>
 </html>

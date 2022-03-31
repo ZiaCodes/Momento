@@ -9,11 +9,22 @@ body {
     user-select: none;
     /* background-color: rgba(27, 27, 27, 0.925); */
 }
-
+/* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
-    /* color: #043F5A
-    #30BAF1
-    #0484B4
-    #9BDBFB; */
 }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* 
+color: 
+#043F5A
+#30BAF1
+#0484B4
+#9BDBFB; 
+*/

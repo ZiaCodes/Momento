@@ -8,10 +8,10 @@ import { FaUserAlt } from 'react-icons/fa';
 import { AiFillLock } from 'react-icons/ai';
 // import {AiFillEyeInvisible} from 'react-icons/ai';
 // import {AiFillEye} from 'react-icons/ai';
-import {GrAdd} from 'react-icons/gr';
+// import {GrAdd} from 'react-icons/gr';
 import Logo from '../assets/logo.png';
 import { client } from '../client';
-import BgVideo from '../assets/bg-log.mp4';
+// import BgVideo from '../assets/bg-log.mp4';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ const Login = () => {
 
   return (
     <>
-    <div className="hidden cursor-pointer lg:block hover:scale-105 left-28 top-28 absolute w-52 h-64 bg-gray-300 shadow-md rounded-xl ">
+    {/* <div className="hidden cursor-pointer lg:block hover:scale-105 left-28 top-28 absolute w-52 h-64 bg-gray-300 shadow-md rounded-xl ">
         <div className="flex items-center w-full h-full flex-col justify-center">
           <img src="https://scontent.frdp4-1.fna.fbcdn.net/v/t39.30808-1/244993211_399906975184858_1087995824311746955_n.jpg?stp=dst-jpg_p480x480&_nc_cat=109&ccb=1-5&_nc_sid=dbb9e7&_nc_ohc=R4t3P7y-C8oAX8f83p2&_nc_ht=scontent.frdp4-1.fna&oh=00_AT-MV37G7a-6wB5OcAX7p9-dzCHxliudQ-fl7b99ZPMBjw&oe=624A1A00" alt="img"  className='overflow-hidden rounded-t-md w-full h-full'/>
           <p className=' rounded-b-xl bg-slate-50 w-full text-center p-4'>Syed Ziauddin</p>
@@ -53,14 +53,14 @@ const Login = () => {
             type="video/mp4" 
             className=' opacity-100 relative w-full h-screen object-cover'
             />
-        </div>
+        </div> */}
     <div>
       <div className=" p-2 flex flex-col justify-between items-center ">
         <div>
           <img className="w-20" src={Logo} alt="logo"/>
           </div>
           <div className="text-center mt-5">
-          <h1 className='text-xl text-white font-bold'>Login into Momento</h1>
+          <h1 className='text-xl text-gray-700 font-bold'>Login into Momento</h1>
         </div>
         </div>
 

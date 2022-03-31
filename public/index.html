@@ -6,11 +6,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="manifest" href="manifest.json">
     <title>Momento | Share Your Moment</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      if('serviceWorker' in navigator){
+        window.addEventListener('load',() =>{
+          navigator.serviceWorker.register('./serviceworker.js')
+          .then((reg)=>console.log('Success: ',reg.scope))
+          .catch((err)=> console.log('Failure: ',err))
+        })
+      }
+    </script>
   </body>
 </html>

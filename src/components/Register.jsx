@@ -4,12 +4,12 @@ import { FaUserAlt } from 'react-icons/fa';
 import { AiFillLock } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md'
 import Logo from '../assets/f-logo.png';
-import BgVideo from '../assets/bg.mp4';
+// import BgVideo from '../assets/bg.mp4';
 
 const Register = () => {
   return (
       <>
-        <div className="absolute -z-10 w-full h-full">
+        {/* <div className="absolute -z-10 w-full h-full">
             <video
             src={BgVideo}
             autoPlay
@@ -19,14 +19,14 @@ const Register = () => {
             type="video/mp4" 
             className='opacity-100 relative w-full h-screen object-cover'
             />
-        </div> 
+        </div>  */}
     <div >
     <div className=" p-2 flex flex-col justify-between items-center ">
       <div>
         <img className="w-80" src={Logo} alt="logo"/>
         </div>
         <div className="text-center mt-3">
-        <h1 className='text-xl text-black font-bold'>Sign Up for Momento <br /> <p className='text-sm font-normal text-white -tracking-tighter'>Its Quick and Easy</p></h1>
+        <h1 className='text-xl text-black font-bold'>Sign Up for Momento <br /> <p className='text-sm font-normal text-gray-600 -tracking-tighter'>Its Quick and Easy</p></h1>
       </div>
       </div>
 

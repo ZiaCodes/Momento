@@ -29,10 +29,11 @@ const Register = () => {
         <h1 className='text-xl text-black font-bold'>Sign Up for Momento <br /> <p className='text-sm font-normal text-gray-600 -tracking-tighter'>Its Quick and Easy</p></h1>
       </div>
       </div>
-
+      <form>
       <div className=" flex flex-col justify-center items-center p-2">
         <div className=" m-2 shadow-md border p-5 text-xl bg-white flex justify-between items-center text-center rounded-full">
           <FaUserAlt/>
+          
           <input className='w-full px-2 border-none outline-none' type="text" placeholder='Name' />
           </div>
           
@@ -46,8 +47,9 @@ const Register = () => {
           </div>
         <div className="m-2 shadow-md border p-5 text-xl bg-white flex  justify-between items-center text-center rounded-full">
           <AiFillLock/>
-          <input className='w-full px-2 border-none outline-none' type="email" placeholder='Confirm password' />
+          <input className='w-full px-2 border-none outline-none' type="password" placeholder='Confirm password' />
           </div>
+          </form>
           <div className="flex">
             <p className='text-xs text-center'>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
           </div>

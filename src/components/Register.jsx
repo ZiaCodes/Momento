@@ -49,7 +49,7 @@ const Register = () => {
           <input className='w-full px-2 border-none outline-none' type="email" placeholder='Confirm password' />
           </div>
           <div className="flex">
-            <p className='text-xs text-center w-auto'>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy.<br /> You may receive SMS notifications from us and can opt out at any time.</p>
+            <p className='text-xs text-center'>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
           </div>
         <div className="m-2 shadow-md border rounded-full bg-white  text-xl w-190 text-center">
           <button style={{
